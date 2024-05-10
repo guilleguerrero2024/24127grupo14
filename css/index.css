@@ -47,7 +47,7 @@ button:hover{
 }
 
 .container{
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;    
 }
 
@@ -87,6 +87,10 @@ header a:hover{
     color: blueviolet;
 }
 
+
+
+
+
 #hero{
     display: flex;
     align-items: center;
@@ -100,7 +104,7 @@ header a:hover{
         rgba(0,0,0,0.4),
         rgba(0,0,0,0.4) 
     )
-    ,url(media/hero.jpg);
+    ,url(/media/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -152,7 +156,7 @@ header a:hover{
         rgba(0,0,0,0.4),
         rgba(0,0,0,0.4) 
     )
-    ,url(media/atencion-Veterinaria.jpg);
+    ,url(/media/atencion-Veterinaria.jpg);
 }
 
 .carta:nth-child(2){
@@ -161,7 +165,7 @@ header a:hover{
         rgba(0,0,0,0.4),
         rgba(0,0,0,0.4) 
     )
-   ,url(media/especialidades-Veterinarias.jpg); 
+    ,url(/media/especialidades-Veterinarias.jpg); 
 }
 
 .carta:last-child{
@@ -170,7 +174,7 @@ header a:hover{
         rgba(0,0,0,0.4),
         rgba(0,0,0,0.4) 
     )
-    ,url(media/laboratorio-Veterinario.jpg);   
+    ,url(/media/laboratorio-Veterinario.jpg);   
 }
 
 #caracteristicas .container{
@@ -218,6 +222,7 @@ footer p{
 }
 
 
+
 @media (min-width: 720px){
     header{
         position: fixed;
@@ -250,7 +255,7 @@ footer p{
         rgba(0,0,0,0.4),
         rgba(0,0,0,0.4) 
     )
-    ,url("media/somos-veterinariosYa!.jpg");
+    ,url("/media/somos-veterinariosYa!.jpg");
     background-position: center center;
     background-size: cover;
     height: 500px;
@@ -279,7 +284,7 @@ footer p{
     }
     #nuestros-servicios h2{
         font-size: 4em;
-       margin-bottom: 60px;
+        margin-bottom: 60px;
     }
 
     #nuestros-servicios h3{
@@ -297,7 +302,7 @@ footer p{
     }
 
     #caracteristicas{
-        background-image: url("media/estudios.png");
+        background-image: url("/media/estudios.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -305,7 +310,7 @@ footer p{
         border-radius: 5px;
         box-shadow: 10px 10px 20px;
     }
-   
+    
     #caracteristicas ul{
         font-size: larger;
         text-shadow: 5px 5px 10px; 
@@ -317,6 +322,7 @@ footer p{
 
     #final .my-button{
         font-size: 1.5em;
+        position: relative;
     }
 
     footer .container{
