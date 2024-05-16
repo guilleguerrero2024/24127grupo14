@@ -11,6 +11,28 @@ body{
     font-family: 'Roboto',sans-serif,Arial,Helvetica;
 }
 
+.float{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow:  2px 2px 3px #999;
+    text-align: center;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+}
+
+.fa-whatsapp{
+    font-size: 63px;   
+}
+
+.float:hover{
+    background-color: #11df5d;
+}
+
 h1{font-size: 3.5em;}
 h2{font-size: 2.7em;}
 h3{font-size: 2em;}
