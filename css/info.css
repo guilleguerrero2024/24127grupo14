@@ -1,0 +1,9 @@
+section{
+    float:left;
+    margin-top: 200px;
+    height: 80vw;
+}
+header{
+    position:relative;
+    width: 100%;
+}
