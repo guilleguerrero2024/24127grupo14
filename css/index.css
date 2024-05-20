@@ -258,8 +258,6 @@ footer p{
     font-size: 1.2em;
 }
 
-
-
 @media (min-width: 720px){
     header{
         position: fixed;
