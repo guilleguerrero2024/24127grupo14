@@ -82,7 +82,7 @@ button:hover{
 
 .container{
     max-width: 1200px;
-    margin: auto;    
+    margin: auto;       
 }
 
 header{
@@ -92,7 +92,7 @@ header{
 header .container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;        
 }
 
 header .logo{
@@ -121,7 +121,7 @@ header a:hover{
     color: blueviolet;
 }
 
- button a {
+button a{
     text-decoration: none;
     color: white;
 }
@@ -222,7 +222,6 @@ header a:hover{
 #caracteristicas li{
     margin: 20px 70px;
     font-weight: bold;
-
 }
 
 #final{
@@ -240,6 +239,21 @@ header a:hover{
     font-size: 3em;
 }
 
+.link{
+    display: inline-flex;
+}
+
+.link a:hover {
+    color: blueviolet; 
+}
+
+.social {
+    margin: 80px 10px;
+    width: 40px;
+    border-radius: 100px;
+    background-color: rgb(150, 150, 150);
+}
+
 footer{
     background-color: rgb(128, 128, 128);
 }
@@ -254,9 +268,11 @@ footer .container{
 footer p{
     margin: 0;
     padding: 10px 0px 10px;
-    color: rgb(95, 95, 95);
-    font-size: 1.2em;
+    color: rgb(75, 75, 75);
+    font-size: 1.3em;
 }
+
+
 
 @media (min-width: 720px){
     header{
