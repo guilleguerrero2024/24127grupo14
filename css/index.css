@@ -12,6 +12,7 @@ body{
 }
 
 .float{
+    display: none;
     position: fixed;
     width: 60px;
     height: 60px;
@@ -34,9 +35,9 @@ body{
 }
 
 .huella{
-      animation-name: huella;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
+    animation-name: huella;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 @keyframes huella{
     0%   {transform: translate( 0px,0px) }
@@ -272,14 +273,11 @@ footer p{
     font-size: 1.3em;
 }
 
-
-
-@media (min-width: 720px){
-    header{
-        position: fixed;
-        width: 100%;
+@media only screen and (min-width: 769px){ 
+    
+    .float{
+        display: inline;
     }
-
     header .container{
         flex-direction: row;
         justify-content: space-between;
@@ -289,6 +287,25 @@ footer p{
         flex-direction: row;
         padding-right: 15px;
         padding-bottom: 0;
+    }
+
+    #caracteristicas{
+        background-image:url("/media/estudios.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 70px 70px;
+        
+        box-shadow: 10px 10px 20px;
+    }
+
+}
+
+
+@media (min-width: 1290px){
+    header{
+        position: fixed;
+        width: 100%;
     }
 
     #hero h1{
