@@ -38,6 +38,11 @@ body{
     animation-name: huella;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    height: 1.5rem;
+    width: 1.5rem;
+    
 }
 @keyframes huella{
     0%   {transform: translate( 0px,0px) }

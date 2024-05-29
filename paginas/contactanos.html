@@ -24,45 +24,46 @@
       <div>
       <form >
 
-        <label for="nombre">Nombre</label>
+        <label for="nombre">Nombre :</label>
         <input type="text" name="nombre" id="nombre">
         
-        <label for="apellido">Apellido</label>
+        <label for="apellido">Apellido :</label>
         <input type="text" name="apellido" id="apellido">
         
-        <p>Tipo de mascota  </p>
-        <p>
-        <input type="radio" name="tipo" id="perro" value="perro">perro
-        <input type="radio" name="tipo" id="gato" value="gato">gato
-        <input type="radio" name="tipo" id="otro" value="otro">otro
-        </p>
-        <label for="nombre mascota">Nombre de la mascota </label>
-        <input type="text" name="nombre mascota" id="">
-
-        <label for="años de vida">Años de vida</label>
-        <input type="number" name="años de vida "  id="">
-        <p>
-        <label for="castado">Castrado</label>
+        <label for="email">Correo electronico :</label>
+        <input type="email" name="correo electronico" id="email" required>
         
-        <input type="radio" name="si" id=""value="true">Si
-        <input type="radio" name="no" id="" value="false">No
+        <br>
+        <label for="tipo">Tipo de mascota</label>
+        <select name="tipo" id="tipo">
+          <option value="perro">perro</option>
+          <option value="gato">gato</option>
+          <option value="otro">otro</option>
+        </select>
         
-        </p>    
-        <label for="email">Correo electronico</label>
-        <input type="email" name="correo electronico" id="" required>
-
-        <textarea name="consulta" id="" cols="30" rows="10"placeholder ="ingrese su comentario aqui."></textarea>
-
+        <label for="nombre_mascota">Nombre de la mascota :</label>
+        <input type="text" name="nombre_mascota" id="nombre_mascota">
         
+        <label for="Años">Años de vida :</label>
+        <input type="number" name="años"  id="años" min="0" max="30">
+        <br>
+        <fieldset>
+        <legend><label for="castado">Castrado</label></legend>
+        <input type="radio" name="castrado" id="castrado"value="true">Si
+        <input type="radio" name="castrado" id="castrado" value="false">No
+        </fieldset>
+        <br>
+
+        <textarea name="consulta" id="" cols="39" rows="10"placeholder ="ingrese su comentario aqui.."></textarea>
+        <br>
         <button type="submit"class="my-button">Contactanos ahora!</button>
         </form>
+        <br>
         </div>
 
     </section>
 
-    
 
-    
     <section id="final">
       <h2>VeterinariosYa!</h2>
       <a href="/paginas/info.html"><button class="my-button">+ Info</button></a>
@@ -73,5 +74,27 @@
         <p>&copy; VeterinariosYa! 2024</p>
       </div>
     </footer>
+
+    <script>
+      form.addEventListener("submit",validacion);
+      
+      form.addEventListener("focus",campo)
+      function validacion(e){
+        revisarCampo(form.nombre.value, e);
+        revisarCampo(form.apellido.value,e);
+        revisarCampo(form.email.value,e);
+      }
+
+      function revisarCampo (campo){
+        if (campo ==""){
+          campo.style.background='#F89A76';
+          // event.target.style.background = 
+          // submit.preventDefault();
+        }
+        else{alert("sus datos y comentario han sido procesados")}
+      }
+
+
+    </script>
   </body>
 </html>

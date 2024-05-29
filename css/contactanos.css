@@ -61,3 +61,11 @@ footer{
     height: 20vw;
 }
 }
+@media (min-width: 1290px){
+    #final{
+        height: 20vw;
+    }
+    footer{
+        height: 12vw;
+    }
+}
