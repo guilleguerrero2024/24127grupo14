@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+
+h1{
+    size: 3em;
+    color: black;
+    padding-top: 100px;
+    margin-top: 0;
+}
