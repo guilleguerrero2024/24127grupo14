@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/contactanos.css">
@@ -8,8 +11,13 @@
   <body>
     <header>
       <div class="container">
-        <a class ="logo"href="/index.html">VeterinariosYa!</a>
+        <a class="logo" href="/index.html">VeterinariosYa!</a>
         <nav>
+          <img
+          class="huella"
+          src="/media/huella_perro.png"
+          alt="huella de la pata de un perro"
+          >
           <a href="/index.html#somos-veterinariosYa">Quiénes Somos</a>
           <a href="/index.html#nuestros-servicios">Nuestros servicios</a>
           <a href="/index.html#caracteristicas">Características</a>
@@ -22,7 +30,7 @@
         Comuníquese con nosotros
       </h1>
       <div>
-      <form >
+      <form name="form" >
 
         <label for="nombre">Nombre :</label>
         <input type="text" name="nombre" id="nombre">
@@ -31,7 +39,7 @@
         <input type="text" name="apellido" id="apellido">
         
         <label for="email">Correo electronico :</label>
-        <input type="email" name="correo electronico" id="email" required>
+        <input type="email" name="correo_electronico" id="email" required>
         
         <br>
         <label for="tipo">Tipo de mascota</label>
@@ -44,19 +52,19 @@
         <label for="nombre_mascota">Nombre de la mascota :</label>
         <input type="text" name="nombre_mascota" id="nombre_mascota">
         
-        <label for="Años">Años de vida :</label>
+        <label for="años">Años de vida :</label>
         <input type="number" name="años"  id="años" min="0" max="30">
         <br>
         <fieldset>
-        <legend><label for="castado">Castrado</label></legend>
-        <input type="radio" name="castrado" id="castrado"value="true">Si
-        <input type="radio" name="castrado" id="castrado" value="false">No
+        <legend><label for="castrado">Castrado</label></legend>
+        <input type="radio" name="castrado" id="castrado" value="true">Si
+        <input type="radio" name="castrado" id="nocastrado" value="false">No
         </fieldset>
         <br>
 
-        <textarea name="consulta" id="" cols="39" rows="10"placeholder ="ingrese su comentario aqui.."></textarea>
+        <textarea name="consulta" id="consulta" cols="39" rows="10" placeholder ="ingrese su comentario aqui.."></textarea>
         <br>
-        <button type="submit"class="my-button">Contactanos ahora!</button>
+        <button type="submit" class="my-button">Contactanos ahora!</button>
         </form>
         <br>
         </div>
@@ -66,7 +74,7 @@
 
     <section id="final">
       <h2>VeterinariosYa!</h2>
-      <a href="/paginas/info.html"><button class="my-button">+ Info</button></a>
+      <a class="my-button" href="/paginas/info.html">+ Info</a>
     </section>
 
     <footer>
@@ -78,21 +86,35 @@
     <script>
       form.addEventListener("submit",validacion);
       
-      form.addEventListener("focus",campo)
-      function validacion(e){
-        revisarCampo(form.nombre.value, e);
-        revisarCampo(form.apellido.value,e);
-        revisarCampo(form.email.value,e);
+      function mensaje(){
+        alert("sus datos y comentario han sido procesados");
       }
+      function validacion(submit){
+        if ( form.nombre.value =="" || form.apellido.value =="" || form.correo_electronico.value =="" || form.tipo.value ==""|| form.nombre_mascota.value =="" || form.años.value =="" || form.consulta.value ==""){ 
+        alert("debe completar todos campos");
+        submit.preventDefault();
+        
+      }
+      else{
+        mensaje();  
+      }
+        
+    }
+      // form.addEventListener("focus",campo)
+      // function validacion(e){
+      //   revisarCampo(form.nombre.value, e);
+      //   revisarCampo(form.apellido.value,e);
+      //   revisarCampo(form.email.value,e);
+      // }
 
-      function revisarCampo (campo){
-        if (campo ==""){
-          campo.style.background='#F89A76';
-          // event.target.style.background = 
-          // submit.preventDefault();
-        }
-        else{alert("sus datos y comentario han sido procesados")}
-      }
+      // function revisarCampo (campo ,submit){
+      //   if (campo ==""){
+      //     campo.style.background='#F89A76';
+      //     event.target.style.background = 
+      //     submit.preventDefault();
+      //   }
+      //   else{alert("sus datos y comentario han sido procesados")}
+      // }
 
 
     </script>
